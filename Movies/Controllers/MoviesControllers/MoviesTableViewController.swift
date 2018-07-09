@@ -61,15 +61,16 @@ class MoviesTableViewController: PullRefreshViewController
     //MARK: - Views Setup -
     fileprivate func setupViews()
     {
-        // Navigation Bar setup if any needed
+        // Navigation Bar setup
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     //MARK: - Data loading -
     fileprivate func loadData()
     {
         self.refreshControl.beginRefreshing()
-        let movieClient = MovieClient.sharedInstance
-        movieClient.fetchMovieList(successCallback: self.onMoviesListReceived, error: self.onErrorHandler)
+        MovieClient.sharedInstance.fetchMovieList(successCallback: self.onMoviesListReceived, error: self.onErrorHandler)
     }
     
     fileprivate lazy var onMoviesListReceived: ([Movie])->() =

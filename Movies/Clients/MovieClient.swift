@@ -17,13 +17,7 @@ class MovieClient
     fileprivate let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
     
     //MARK: - MovieClient Singlton -
-    class var sharedInstance: MovieClient
-    {
-        struct Singleton
-        { static let instance = MovieClient() }
-        
-        return Singleton.instance
-    }
+    static let sharedInstance = MovieClient()
     
     // request to get a dict with
     open func fetchMovieList(successCallback: @escaping ([Movie])->(), error: ((Error?)->())?)

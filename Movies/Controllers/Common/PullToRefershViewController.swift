@@ -17,8 +17,8 @@ class PullRefreshViewController: UIViewController
 {
     //MARK: - UI -
     let refreshControl = UIRefreshControl()
-    let errorMessageView = UIView(frame: CGRect(x: 0.0, y: UIScreen.main.bounds.origin.y, width: UIScreen.main.bounds.width, height: 30))
-    let errorMessageLabel = UILabel(frame: CGRect(x: 10.0, y: 8.0, width: UIScreen.main.bounds.width, height: 15))
+    let errorMessageView = UIView(frame: CGRect(x: 0.0, y: UIScreen.main.bounds.origin.y, width: UIScreen.main.bounds.width, height: 50))
+    let errorMessageLabel = UILabel(frame: CGRect(x: 10.0, y: 4.0, width: UIScreen.main.bounds.width, height: 15))
     
     //MARK: - ViewController Cycle -
     override func viewDidLoad()
@@ -38,9 +38,9 @@ class PullRefreshViewController: UIViewController
         self.errorMessageLabel.font = self.errorMessageLabel.font.withSize(13.0)
         self.errorMessageLabel.layer.cornerRadius = 4
         self.errorMessageLabel.textAlignment = NSTextAlignment.center
-        self.errorMessageLabel.text = NSLocalizedString("Couldn't refresh your movie list :(", comment:"Couldn't refresh your movie list :(")
+        self.errorMessageLabel.text = NSLocalizedString("Couldn't refresh movie list", comment:"Couldn't refresh your movie list :(")
         
-        self.errorMessageView.backgroundColor = UIColor.darkGray
+        self.errorMessageView.backgroundColor = UIColor.black
         self.errorMessageView.addSubview(self.errorMessageLabel)
         self.view.addSubview(self.errorMessageView)
         
