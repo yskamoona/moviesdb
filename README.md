@@ -2,7 +2,7 @@
 
 # Project - Movies
 
-- Moviesis an app that displays a list of Now Playing Movies. It's using the Movie Database APIs. 
+- Movies is an app that displays a list of Now Playing Movies. It's using the Movie Database APIs. 
 - Deployment Target: 11.0.
 - Uses Cocoapods. Please run "Movies.xcworkspace" when running the app. 
 
